@@ -8,18 +8,56 @@
 <body>
     <h1>Elevator Design</h1>
     <div id="Wrapper">
-        <div id="b10L" class="sideBoxL"></div>
+        <div id="b10L" class="sideBoxL">
+          <button id="btn10L">Dn</button>
+            <select id="select10left" class="select">
+                <option value="no">blank</option>
+                <option value="Floor 10">Pent House</option>
+                <option value="Floor 09">Floor 09</option>
+                <option value="Floor 08">Floor 08</option>
+                <option value="Floor 07">Floor 07</option>
+                <option value="Floor 06">Floor 06</option>
+                <option value="Floor 05">Floor 05</option>
+                <option value="Floor 04">Floor 04</option>
+                <option value="Floor 03">Floor 03</option>
+                <option value="Floor 02">Floor 02</option>
+                <option value="Floor 01">Floor 01</option>
+                <option value="Floor 00">Floor 00</option>
+                <option value="Floor -1">Floor -1</option>
+            </select>
+        </div>
         <div class="allBox" id="b10">
             b10
-            <div id="carrage"></div>
+            <div id="carrage-B">B</div>
         </div>
         <div id="b10R" class="sideBoxR"></div>
         <!--      floor change       -->
-        <div id="b09L" class="sideBoxL"></div>
+        <div id="b09L" class="sideBoxL">
+            <button id="btn09L">Dn</button>
+            <button id="btn09LUp">Up</button>
+            <select id="select09left" class="select">
+                <option value="no">blank</option>
+                <option value="Floor 10">Pent House</option>
+                <option value="Floor 09">Floor 09</option>
+                <option value="Floor 08">Floor 08</option>
+                <option value="Floor 07">Floor 07</option>
+                <option value="Floor 06">Floor 06</option>
+                <option value="Floor 05">Floor 05</option>
+                <option value="Floor 04">Floor 04</option>
+                <option value="Floor 03">Floor 03</option>
+                <option value="Floor 02">Floor 02</option>
+                <option value="Floor 01">Floor 01</option>
+                <option value="Floor 00">Floor 00</option>
+                <option value="Floor -1">Floor -1</option>
+            </select>
+        </div>
         <div class="allBox" id="b09">
             b09
+            <div id="carrage-A">A</div>
         </div>
-        <div id="b09R" class="sideBoxR"></div>
+        <div id="b09R" class="sideBoxR">
+
+        </div>
         <!--      floor change       -->
         <div id="b08L" class="sideBoxL"></div>
         <div class="allBox" id="b08">
@@ -81,10 +119,12 @@
         </div>
         <div id="b-1R" class="sideBoxR"></div>
         <!--      Dead End       -->
-        
+
         <div class = "deadEnd">Solid Ground</div>
 
     </div>
-
+    <footer>
+        <script src="script.js"></script>
+    </footer>
 </body>
 </html>
