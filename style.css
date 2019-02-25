@@ -58,7 +58,7 @@ h1{
     background-color: black;
     color: azure;
 }
-#btn10L,#btn09L,#btn09LUp{
+#btn10L,#btn09L,#btn09LUp,#btnPush10L,#btnPush09L{
     width: 40%;
     height: 30%;
     margin-left: 5px;
@@ -69,4 +69,7 @@ select{
     margin: 15px 10px 10px 5px;
     width: 40%;
     height: 30%;
+}
+#s10L,#s09L{
+    padding: 5px;
 }
