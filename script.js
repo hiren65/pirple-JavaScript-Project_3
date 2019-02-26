@@ -6,7 +6,8 @@ let tt,tt1;
 let existingPositionB = 0;
 let currentCallFloorPosition;
 let checkForDouble = true;
-
+//for DIV id
+let tempT;let tempT1;
 
 let positinObject = {
     "no":0,
@@ -36,6 +37,8 @@ function goDown (){
             return;
         }
         checkForDouble = false;
+        //alert(this.id);
+        tempT1 = this.id;
         tt = setInterval( main ,10 );
 }
 /////////////////////////////////
@@ -45,28 +48,68 @@ let b09Dn = document.getElementById("btn09L");
 b09Dn.addEventListener("click",callCarrageToMyFloor);
 
 let b09PushL = document.getElementById("btnPush09L");
-b09PushL.addEventListener("click",goDown01);
+b09PushL.addEventListener("click",goDown);
 
-function goDown01 (){
+/*function goDown01 (){
         if (checkForDouble === false){
             return;
         }
         checkForDouble = false;
-        tt = setInterval( main1 ,10 );
+        tempT1 = this.id;
+        tt = setInterval( main ,10 );
 
-   /* tt1 =   setTimeout(function run() {
-        clearTimeout(tt);
-        goDown1(list09.value) ;position(list09.value,tt1);
-        setTimeout(run, 10);
-    }, 10);*/
+}*/
+//////////////////////////////////////////
+let list08 = document.getElementById("select08left");
+//let list08 = document.getElementById("select08left");
 
-}
+let b08Dn = document.getElementById("btn08L");
+b08Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b08PushL = document.getElementById("btnPush08L");
+b08PushL.addEventListener("click",goDown);
+//////////////////////////////
+
+let list07 = document.getElementById("select07left");
+
+let b07Dn = document.getElementById("btn07L");
+b07Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b07PushL = document.getElementById("btnPush07L");
+b07PushL.addEventListener("click",goDown);
+//////////////////////////////
+
+let list06 = document.getElementById("select06left");
+
+let b06Dn = document.getElementById("btn06L");
+b06Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b06PushL = document.getElementById("btnPush06L");
+b06PushL.addEventListener("click",goDown);
+//////////////////////////////
 function main() {
-    goDown1(list10.value);position(list10.value,tt);
+
+    //alert(tempT);
+   if (tempT1 === "btnPush10L") {
+        goDown1(list10.value);position(list10.value,tt);
+    }
+    if (tempT1 === "btnPush09L") {
+        goDown1(list09.value);position(list09.value,tt);
+    }
+    if (tempT1 === "btnPush08L") {
+        goDown1(list08.value);position(list08.value,tt);
+    }
+    if (tempT1 === "btnPush07L") {
+        goDown1(list07.value);position(list07.value,tt);
+    }
+    if (tempT1 === "btnPush06L") {
+        goDown1(list06.value);position(list06.value,tt);
+    }
+
 }
-function main1() {
+/*function main1() {
     goDown1(list09.value);position(list09.value,tt);
-}
+}*/
 /////////////////////////////////
 
 function goDown1(selected){
@@ -202,7 +245,7 @@ function position(selected,time) {
         checkForDouble = true;
     }
 }
-let tempT;
+
 function callCarrageToMyFloor() {
     let txt1 = getInnerText(this.id );
     tempT = txt1;
@@ -224,6 +267,30 @@ function callCarrageToMyFloor() {
         checkForDouble = false;
         tt = setInterval( goHome ,10 );
     }
+    if (txt1 === "b08L"){
+        if (checkForDouble === false){
+            return;
+        }
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b07L"){
+        if (checkForDouble === false){
+            return;
+        }
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b06L"){
+        if (checkForDouble === false){
+            return;
+        }
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
 }
 function goHome() {
 
@@ -232,6 +299,15 @@ function goHome() {
     }
     if (tempT === "b09L"){
         goDown1("Floor 09");position("Floor 09",tt);
+    }
+    if (tempT === "b08L"){
+        goDown1("Floor 08");position("Floor 08",tt);
+    }
+    if (tempT === "b07L"){
+        goDown1("Floor 07");position("Floor 07",tt);
+    }
+    if (tempT === "b06L"){
+        goDown1("Floor 06");position("Floor 06",tt);
     }
 
 
