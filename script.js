@@ -6,6 +6,8 @@ let tt,tt1;
 let existingPositionB = 0;
 let currentCallFloorPosition;
 let checkForDouble = true;
+//for push
+let checkForDouble1 = true;
 //for DIV id
 let tempT;let tempT1;
 
@@ -33,10 +35,13 @@ let b10PushL = document.getElementById("btnPush10L");
 b10PushL.addEventListener("click",goDown);
 
 function goDown (){
-        if (checkForDouble === false){
+        if (checkForDouble1 === false){
             return;
         }
-        checkForDouble = false;
+    if (checkForDouble === false){
+        return;
+    }
+        checkForDouble1 = false;
         //alert(this.id);
         tempT1 = this.id;
         tt = setInterval( main ,10 );
@@ -105,7 +110,7 @@ function main() {
     if (tempT1 === "btnPush06L") {
         goDown1(list06.value);position(list06.value,tt);
     }
-
+    //checkForDouble = true;
 }
 /*function main1() {
     goDown1(list09.value);position(list09.value,tt);
@@ -115,6 +120,7 @@ function main() {
 function goDown1(selected){
 
     if (true){
+
         if (positinObject[selected]<existingPositionB){
             movingCarrageNagative();
         }if (positinObject[selected]>existingPositionB) {
@@ -147,14 +153,17 @@ function movingCarrageNagative() {
     carrageb.style.top = pos + "px";
     console.log(carrageb.style.top );
 }
+
 function position(selected,time) {
+
+
     if (pos === 0 && selected === "no"){
         //alert();
         clearInterval(tt);
         //clearTimeout(time);
         pos = 0;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if ((pos === 0 && selected === "Floor 10") || (pos === 0 && selected === "no")){
         //alert();
@@ -162,7 +171,7 @@ function position(selected,time) {
         //clearTimeout(time);
         pos = 0;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 105 && selected === "Floor 09"){
         //alert();
@@ -170,7 +179,7 @@ function position(selected,time) {
         //clearTimeout(time);
         pos = 105;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 210 && selected === "Floor 08"){
         //alert();
@@ -178,7 +187,7 @@ function position(selected,time) {
         //clearTimeout(time);
         pos = 210;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 315 && selected === "Floor 07"){
         //alert();
@@ -186,7 +195,7 @@ function position(selected,time) {
         //clearTimeout(time);
         pos = 315;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 420 && selected === "Floor 06"){
         //alert();
@@ -194,7 +203,7 @@ function position(selected,time) {
         //clearTimeout(time);
         pos = 420;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 525 && selected === "Floor 05"){
         //alert();
@@ -202,7 +211,7 @@ function position(selected,time) {
         //clearTimeout(time);
         pos = 525;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 630 && selected === "Floor 04"){
         //alert();
@@ -210,7 +219,7 @@ function position(selected,time) {
         //clearTimeout(tt);
         pos = 630;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 735 && selected === "Floor 03"){
         //alert();
@@ -218,7 +227,7 @@ function position(selected,time) {
         //clearTimeout(tt);
         pos = 735;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 840 && selected === "Floor 02"){
         //alert();
@@ -226,7 +235,7 @@ function position(selected,time) {
         //clearTimeout(tt);
         pos = 840;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1 = true;
     }
     if (pos === 945 && selected === "Floor 01"){
         //alert();
@@ -234,7 +243,7 @@ function position(selected,time) {
         //clearTimeout(tt);
         pos = 945;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1= true;
     }
     if (pos === 1050 && selected === "Floor 00"){
         //alert();
@@ -242,85 +251,131 @@ function position(selected,time) {
         //clearTimeout(tt);
         pos = 1050;
         existingPositionB = pos;
-        checkForDouble = true;
+        checkForDouble1= true;
     }
+
 }
 
 function callCarrageToMyFloor() {
+    if (checkForDouble === false){
+        return;
+    }
+    if (checkForDouble1 === false){
+        return;
+    }
     let txt1 = getInnerText(this.id );
     tempT = txt1;
     //console.log(txt1);
-    //alert(txt1);
+    alert( "ttttt" + checkForDouble);
+    //alert(this.id);
+    //buttonDisable(this.id);
     if (txt1 === "b10L"){
-        if (checkForDouble === false){
-            return;
-        }
+
         //alert(txt1);
         checkForDouble = false;
         tt = setInterval( goHome ,10 );
     }
     if (txt1 === "b09L"){
-        if (checkForDouble === false){
-            return;
+
+        if (checkForDouble === true) {
+            alert("ggg" + checkForDouble);
+            //checkForDouble = false;
+            tt = setInterval( goHome ,10 );
         }
         //alert(txt1);
-        checkForDouble = false;
-        tt = setInterval( goHome ,10 );
+
     }
     if (txt1 === "b08L"){
-        if (checkForDouble === false){
-            return;
-        }
+
         //alert(txt1);
         checkForDouble = false;
         tt = setInterval( goHome ,10 );
     }
     if (txt1 === "b07L"){
-        if (checkForDouble === false){
-            return;
-        }
+
         //alert(txt1);
         checkForDouble = false;
         tt = setInterval( goHome ,10 );
     }
     if (txt1 === "b06L"){
-        if (checkForDouble === false){
-            return;
-        }
+
         //alert(txt1);
         checkForDouble = false;
         tt = setInterval( goHome ,10 );
     }
 }
 function goHome() {
-
+   // checkForDouble = false;
     if (tempT === "b10L"){
         goDown1("Floor 10");position("Floor 10",tt);
+        if (pos === 0){
+            checkForDouble = true;
+        }
     }
     if (tempT === "b09L"){
         goDown1("Floor 09");position("Floor 09",tt);
+        if (pos === 105){
+            checkForDouble = true;
+        }
+
     }
     if (tempT === "b08L"){
         goDown1("Floor 08");position("Floor 08",tt);
+        if (pos === 210){
+            checkForDouble = true;
+        }
     }
     if (tempT === "b07L"){
         goDown1("Floor 07");position("Floor 07",tt);
+        if (pos === 315){
+            checkForDouble = true;
+        }
     }
     if (tempT === "b06L"){
         goDown1("Floor 06");position("Floor 06",tt);
+        if (pos === 420){
+            checkForDouble = true;
+        }
     }
-
-
+    //buttonAble();
 }
 function getInnerText(id) {
     let txt = document.getElementById(id);
     var x = document.getElementById(id).parentElement.id;
     return x;
 }
+function buttonDisable(id){
+    let btnF10Dn = document.getElementById("btn10L");
+    btnF10Dn.disabled = true;
+    let btnF09Dn = document.getElementById("btn09L");
+    btnF09Dn.disabled = true;
+    let btnF08Dn = document.getElementById("btn08L");
+    btnF08Dn.disabled = true;
+    let btnF07Dn = document.getElementById("btn07L");
+    btnF07Dn.disabled = true;
+    let btnF06Dn = document.getElementById("btn06L");
+    btnF06Dn.disabled = true;
+    let btnIdArr = [btnF10Dn,btnF09Dn,btnF08Dn,btnF07Dn,btnF06Dn];
+    for(let i=0;i<btnIdArr.length;i++){
+        if (id ===  btnIdArr[i].id){
+            btnIdArr[i].disabled = false;
+        }
+    }
 
+}
+function buttonAble(){
+    let btnF10Dn = document.getElementById("btn10L");
+    btnF10Dn.disabled = false;
+    let btnF09Dn = document.getElementById("btn09L");
+    btnF09Dn.disabled = false;
+    let btnF08Dn = document.getElementById("btn08L");
+    btnF08Dn.disabled = false;
+    let btnF07Dn = document.getElementById("btn07L");
+    btnF07Dn.disabled = false;
+    let btnF06Dn = document.getElementById("btn06L");
+    btnF06Dn.disabled = false;
 
-
-
+}
 
 
 //automatic
