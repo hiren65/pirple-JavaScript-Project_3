@@ -62,7 +62,10 @@ h1{
 }
 #btn10L,#btn09L,#btn09LUp,#btnPush10L,#btnPush09L,
 #btnPush08L,#btn08LUp,#btn08L,#btnPush07L,#btn07LUp,#btn07L,
-#btnPush06L,#btn06LUp,#btn06L{
+#btnPush06L,#btn06LUp,#btn06L,#btnPush05L,#btn05LUp,#btn05L,
+#btnPush04L,#btn04LUp,#btn04L,#btnPush03L,#btn03LUp,#btn03L,
+#btnPush02L,#btn02LUp,#btn02L,#btnPush01L,#btn01LUp,#btn01L,
+#btnPush00L,#btn00LUp,#btn00L,#btnPush-1L,#btn-1LUp,#btn-1L{
     width: 35%;
     height: 30%;
     margin-left: 5px;
@@ -80,7 +83,7 @@ select{
     background-color: blanchedalmond;
     box-shadow: inset 1px 1px 3px #4c4c4c;
 }
-#s10L,#s09L,#s08L,#s07L,#s06L{
+#s10L,#s09L,#s08L,#s07L,#s06L,#s05L,#s04L,#s03L,#s02L,#s01L,#s00L,#s-1L{
     padding: 5px;
     color: #afe2af;
 }

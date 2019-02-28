@@ -92,6 +92,65 @@ b06Dn.addEventListener("click",callCarrageToMyFloor);
 let b06PushL = document.getElementById("btnPush06L");
 b06PushL.addEventListener("click",goDown);
 //////////////////////////////
+let list05 = document.getElementById("select05left");
+
+let b05Dn = document.getElementById("btn05L");
+b05Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b05PushL = document.getElementById("btnPush05L");
+b05PushL.addEventListener("click",goDown);
+//////////////////////////////
+let list04 = document.getElementById("select04left");
+
+let b04Dn = document.getElementById("btn04L");
+b04Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b04PushL = document.getElementById("btnPush04L");
+b04PushL.addEventListener("click",goDown);
+//////////////////////////////
+let list03 = document.getElementById("select03left");
+
+let b03Dn = document.getElementById("btn03L");
+b03Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b03PushL = document.getElementById("btnPush03L");
+b03PushL.addEventListener("click",goDown);
+//////////////////////////////
+let list02 = document.getElementById("select02left");
+
+let b02Dn = document.getElementById("btn02L");
+b02Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b02PushL = document.getElementById("btnPush02L");
+b02PushL.addEventListener("click",goDown);
+//////////////////////////////
+let list01 = document.getElementById("select01left");
+
+let b01Dn = document.getElementById("btn01L");
+b01Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b01PushL = document.getElementById("btnPush01L");
+b01PushL.addEventListener("click",goDown);
+//////////////////////////////
+let list00 = document.getElementById("select00left");
+
+let b00Dn = document.getElementById("btn00L");
+b00Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b00PushL = document.getElementById("btnPush00L");
+b00PushL.addEventListener("click",goDown);
+
+//////////////////////////////
+//////////////////////////////
+let list_1 = document.getElementById("select-1left");
+
+let b_1Dn = document.getElementById("btn-1L");
+b_1Dn.addEventListener("click",callCarrageToMyFloor);
+
+let b_1PushL = document.getElementById("btnPush-1L");
+b_1PushL.addEventListener("click",goDown);
+
+////////////////////////////////////////////
 function main() {
 
     //alert(tempT);
@@ -109,6 +168,27 @@ function main() {
     }
     if (tempT1 === "btnPush06L") {
         goDown1(list06.value);position(list06.value,tt);
+    }
+    if (tempT1 === "btnPush05L") {
+        goDown1(list05.value);position(list05.value,tt);
+    }
+    if (tempT1 === "btnPush04L") {
+        goDown1(list04.value);position(list04.value,tt);
+    }
+    if (tempT1 === "btnPush03L") {
+        goDown1(list03.value);position(list03.value,tt);
+    }
+    if (tempT1 === "btnPush02L") {
+        goDown1(list02.value);position(list02.value,tt);
+    }
+    if (tempT1 === "btnPush01L") {
+        goDown1(list01.value);position(list01.value,tt);
+    }
+    if (tempT1 === "btnPush00L") {
+        goDown1(list00.value);position(list00.value,tt);
+    }
+    if (tempT1 === "btnPush-1L") {
+        goDown1(list_1.value);position(list_1.value,tt);
     }
     //checkForDouble = true;
 }
@@ -253,6 +333,14 @@ function position(selected,time) {
         existingPositionB = pos;
         checkForDouble1= true;
     }
+    if (pos === 1155 && selected === "Floor -1"){
+        //alert();
+        clearInterval(tt);
+        //clearTimeout(tt);
+        pos = 1155;
+        existingPositionB = pos;
+        checkForDouble1= true;
+    }
 
 }
 
@@ -303,6 +391,48 @@ function callCarrageToMyFloor() {
         checkForDouble = false;
         tt = setInterval( goHome ,10 );
     }
+    if (txt1 === "b05L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b04L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b03L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b02L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b01L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b00L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b-1L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
 }
 function goHome() {
    // checkForDouble = false;
@@ -334,6 +464,48 @@ function goHome() {
     if (tempT === "b06L"){
         goDown1("Floor 06");position("Floor 06",tt);
         if (pos === 420){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b05L"){
+        goDown1("Floor 05");position("Floor 05",tt);
+        if (pos === 525){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b04L"){
+        goDown1("Floor 04");position("Floor 04",tt);
+        if (pos === 630){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b03L"){
+        goDown1("Floor 03");position("Floor 03",tt);
+        if (pos === 735){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b02L"){
+        goDown1("Floor 02");position("Floor 02",tt);
+        if (pos === 840){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b01L"){
+        goDown1("Floor 01");position("Floor 01",tt);
+        if (pos === 945){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b00L"){
+        goDown1("Floor 00");position("Floor 00",tt);
+        if (pos === 1050){
+            checkForDouble = true;
+        }
+    }
+    if (tempT === "b-1L"){
+        goDown1("Floor 00");position("Floor -1",tt);
+        if (pos === 1155){
             checkForDouble = true;
         }
     }
