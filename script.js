@@ -649,13 +649,15 @@ function stopCarrage(){
     clearInterval(tt);
     tt =  setInterval(kk,10);
     checkForDouble = false;checkForDouble1 = false;
+    let ebtn = document.getElementById("reset");
+    ebtn.style.color = "#afe2af";
 
 }
 let resetAll = document.getElementById("reset");
 resetAll.addEventListener("click",resetCarrage);
 function resetCarrage() {
     clearInterval(tt);checkForDouble = true;checkForDouble1 = true;
-
+    this.style.color = "azure";
 }
 
 //automatic
