@@ -31,8 +31,8 @@ let list10 = document.getElementById("select10left");
 let b10Dn = document.getElementById("btn10L");
 b10Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b10PushL = document.getElementById("btnPush10L");
-b10PushL.addEventListener("click",goDown);
+/*let b10PushL = document.getElementById("btnPush10L");
+b10PushL.addEventListener("click",goDown);*/
 
 function goDown (){
         if (checkForDouble1 === false){
@@ -44,6 +44,7 @@ function goDown (){
         checkForDouble1 = false;
         //alert(this.id);
         tempT1 = this.id;
+
         tt = setInterval( main ,10 );
 }
 /////////////////////////////////
@@ -71,8 +72,8 @@ let list08 = document.getElementById("select08left");
 let b08Dn = document.getElementById("btn08L");
 b08Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b08PushL = document.getElementById("btnPush08L");
-b08PushL.addEventListener("click",goDown);
+/*let b08PushL = document.getElementById("btnPush08L");
+b08PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 
 let list07 = document.getElementById("select07left");
@@ -80,8 +81,8 @@ let list07 = document.getElementById("select07left");
 let b07Dn = document.getElementById("btn07L");
 b07Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b07PushL = document.getElementById("btnPush07L");
-b07PushL.addEventListener("click",goDown);
+/*let b07PushL = document.getElementById("btnPush07L");
+b07PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 
 let list06 = document.getElementById("select06left");
@@ -89,56 +90,56 @@ let list06 = document.getElementById("select06left");
 let b06Dn = document.getElementById("btn06L");
 b06Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b06PushL = document.getElementById("btnPush06L");
-b06PushL.addEventListener("click",goDown);
+/*let b06PushL = document.getElementById("btnPush06L");
+b06PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list05 = document.getElementById("select05left");
 
 let b05Dn = document.getElementById("btn05L");
 b05Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b05PushL = document.getElementById("btnPush05L");
-b05PushL.addEventListener("click",goDown);
+//let b05PushL = document.getElementById("btnPush05L");
+//b05PushL.addEventListener("click",goDown);
 //////////////////////////////
 let list04 = document.getElementById("select04left");
 
 let b04Dn = document.getElementById("btn04L");
 b04Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b04PushL = document.getElementById("btnPush04L");
-b04PushL.addEventListener("click",goDown);
+/*let b04PushL = document.getElementById("btnPush04L");
+b04PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list03 = document.getElementById("select03left");
 
 let b03Dn = document.getElementById("btn03L");
 b03Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b03PushL = document.getElementById("btnPush03L");
-b03PushL.addEventListener("click",goDown);
+/*let b03PushL = document.getElementById("btnPush03L");
+b03PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list02 = document.getElementById("select02left");
 
 let b02Dn = document.getElementById("btn02L");
 b02Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b02PushL = document.getElementById("btnPush02L");
-b02PushL.addEventListener("click",goDown);
+/*let b02PushL = document.getElementById("btnPush02L");
+b02PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list01 = document.getElementById("select01left");
 
 let b01Dn = document.getElementById("btn01L");
 b01Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b01PushL = document.getElementById("btnPush01L");
-b01PushL.addEventListener("click",goDown);
+/*let b01PushL = document.getElementById("btnPush01L");
+b01PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list00 = document.getElementById("select00left");
 
 let b00Dn = document.getElementById("btn00L");
 b00Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b00PushL = document.getElementById("btnPush00L");
-b00PushL.addEventListener("click",goDown);
+/*let b00PushL = document.getElementById("btnPush00L");
+b00PushL.addEventListener("click",goDown);*/
 
 //////////////////////////////
 //////////////////////////////
@@ -147,20 +148,21 @@ let list_1 = document.getElementById("select-1left");
 let b_1Dn = document.getElementById("btn-1L");
 b_1Dn.addEventListener("click",callCarrageToMyFloor);
 
-let b_1PushL = document.getElementById("btnPush-1L");
-b_1PushL.addEventListener("click",goDown);
+/*let b_1PushL = document.getElementById("btnPush-1L");
+b_1PushL.addEventListener("click",goDown);*/
 
 ////////////////////////////////////////////
 function main() {
-
+    console.log(tempT1);
     //alert(tempT);
-   if (tempT1 === "btnPush10L") {
+   /*if (tempT1 === "btnPush10L") {
         goDown1(list10.value);position(list10.value,tt);
-    }
+    }*/
     if (tempT1 === "btnPush09L") {
+        console.log(tempT1);
         goDown1(list09.value);position(list09.value,tt);
     }
-    if (tempT1 === "btnPush08L") {
+/*    if (tempT1 === "btnPush08L") {
         goDown1(list08.value);position(list08.value,tt);
     }
     if (tempT1 === "btnPush07L") {
@@ -189,7 +191,7 @@ function main() {
     }
     if (tempT1 === "btnPush-1L") {
         goDown1(list_1.value);position(list_1.value,tt);
-    }
+    }*/
     //checkForDouble = true;
 }
 /*function main1() {
@@ -354,8 +356,8 @@ function callCarrageToMyFloor() {
     let txt1 = getInnerText(this.id );
     tempT = txt1;
     //console.log(txt1);
-    alert( "ttttt" + checkForDouble);
-    //alert(this.id);
+    //alert( "ttttt" + checkForDouble);
+    //alert("tempt" + tempT + " " +txt1);
     //buttonDisable(this.id);
     if (txt1 === "b10L"){
 
@@ -365,11 +367,11 @@ function callCarrageToMyFloor() {
     }
     if (txt1 === "b09L"){
 
-        if (checkForDouble === true) {
-            alert("ggg" + checkForDouble);
-            //checkForDouble = false;
+        //if (checkForDouble === true) {
+            //alert("ggg" + checkForDouble);
+            checkForDouble = false;
             tt = setInterval( goHome ,10 );
-        }
+        //}
         //alert(txt1);
 
     }
@@ -436,6 +438,7 @@ function callCarrageToMyFloor() {
 }
 function goHome() {
    // checkForDouble = false;
+    //alert("jjjjjj"+ tempT);
     if (tempT === "b10L"){
         goDown1("Floor 10");position("Floor 10",tt);
         if (pos === 0){
@@ -548,7 +551,112 @@ function buttonAble(){
     btnF06Dn.disabled = false;
 
 }
+/////////////
+function goDown11(selected,existing){
 
+    if (true){
+        //alert(selected + " " + existing);
+        if (selected<existing){
+            movingCarrageNagative();
+        }if (selected>existing) {
+            movingCarrage();
+        }if (selected===existing) {
+            //existingPositionB = pos;
+            carrageb.style.top = existing + "px";
+            //clearInterval(tt);
+            //alert("hhhh");
+            //return;
+        }
+    }
+
+
+
+};
+function kk(){
+    if (pos >= 0 && pos < 105 ){
+        //alert(1);
+
+        goDown11(positinObject["Floor 10"],pos);position("Floor 10",tt);
+    }
+    if (pos >= 105 && pos < 210 ){
+        //alert(2);
+        //goDown1("Floor 09");position("Floor 09",tt);
+        goDown11(positinObject["Floor 09"],pos);position("Floor 09",tt);
+        //clearInterval(tt);
+        //clearTimeout(time);
+
+    }
+    if (pos >= 210 && pos < 315 ){
+        //alert(3);
+        // goDown1("Floor 08");position("Floor 08",tt);
+        goDown11(positinObject["Floor 08"],pos);position("Floor 08",tt);
+
+    }
+    if (pos >= 315 && pos < 420 ){
+       // alert(4);
+        //goDown1("Floor 07");position("Floor 07",tt);
+        goDown11(positinObject["Floor 07"],pos);position("Floor 07",tt);
+    }
+    if (pos >= 420 && pos < 525 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 06"],pos);position("Floor 06",tt);
+
+    }
+    if (pos >= 525 && pos < 630 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 05"],pos);position("Floor 05",tt);
+
+    }
+    if (pos >= 630 && pos < 735 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 04"],pos);position("Floor 04",tt);
+
+    }
+    if (pos >= 735 && pos < 840 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 03"],pos);position("Floor 03",tt);
+
+    }
+    if (pos >= 840 && pos < 945 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 02"],pos);position("Floor 02",tt);
+
+    }
+    if (pos >= 945 && pos < 1050 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 01"],pos);position("Floor 01",tt);
+
+    }
+    if (pos >= 1050 && pos < 1155 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11(positinObject["Floor 00"],pos);position("Floor 00",tt);
+
+    }
+}
+/////////
+
+let emergency = document.getElementById("emergency");
+emergency.addEventListener("click",stopCarrage);
+function stopCarrage(){
+    //alert(pos);
+    clearInterval(tt);
+    tt =  setInterval(kk,10);
+    checkForDouble = false;checkForDouble1 = false;
+
+}
+let resetAll = document.getElementById("reset");
+resetAll.addEventListener("click",resetCarrage);
+function resetCarrage() {
+    clearInterval(tt);checkForDouble = true;checkForDouble1 = true;
+
+}
 
 //automatic
 function autoSet(){

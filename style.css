@@ -9,10 +9,11 @@ h1{
     border: 1px solid crimson;
     background-color: black;
     color: antiquewhite;
+    padding: 10px;
 }
 #Wrapper{
     display: grid;
-    grid-template-columns: 30% 40% 30%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows:repeat(13,100px) ;
     grid-gap: 5px;
 
@@ -33,23 +34,23 @@ h1{
     background-color: cadetblue;
 }
 #carrage-A{
-    width: 15%;
+    width: 45%;
     height: 90%;
     background-color: azure;
     border: darkblue;
     display: block;
-    margin-left: 55%;
+    margin-left: 53%;
     margin-right: auto;
     margin-top: -10px;
     box-shadow: 3px 3px 5px grey;
 }
 #carrage-B{
-     width: 15%;
+     width: 45%;
      height: 90%;
      background-color: azure;
      border: darkblue;
      display: block;
-     margin-left: 35%;
+     margin-left: 2%;
      margin-right: auto;
      margin-top: -10px;
      box-shadow: 3px 3px 5px grey;
@@ -59,13 +60,15 @@ h1{
     grid-column: 1/4;
     background-color: black;
     color: azure;
+    padding: 10px;
 }
 #btn10L,#btn09L,#btn09LUp,#btnPush10L,#btnPush09L,
 #btnPush08L,#btn08LUp,#btn08L,#btnPush07L,#btn07LUp,#btn07L,
 #btnPush06L,#btn06LUp,#btn06L,#btnPush05L,#btn05LUp,#btn05L,
 #btnPush04L,#btn04LUp,#btn04L,#btnPush03L,#btn03LUp,#btn03L,
 #btnPush02L,#btn02LUp,#btn02L,#btnPush01L,#btn01LUp,#btn01L,
-#btnPush00L,#btn00LUp,#btn00L,#btnPush-1L,#btn-1LUp,#btn-1L{
+#btnPush00L,#btn00LUp,#btn00L,#btnPush-1L,#btn-1LUp,#btn-1L,
+#reset{
     width: 35%;
     height: 30%;
     margin-left: 5px;
@@ -75,6 +78,22 @@ h1{
     box-shadow: 3px 3px 5px #3f3f3f;
     background-color: rgba(11, 17, 99, 0.65);
     color: azure;
+}
+#emergency{
+    width: 35%;
+    height: 30%;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #3f3f3f;
+    background-color: rgba(226, 16, 38, 0.65);
+    color: azure;
+}
+#btn08L{
+    border-radius: 35%;
+    width: 3.0rem;
+    height: 2.5rem;
 }
 select{
     margin: 10px 10px 10px 5px;

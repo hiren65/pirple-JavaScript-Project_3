@@ -22,13 +22,10 @@
 
         </div>
  */
-
-function createTemplate(id,id1,id2,id3,id4,id5,no) {
-    let div = document.getElementById(id);
-    div.innerHTML = `<span id=${id1}>F0${no}</span>
-            <button id=${id2}>Dn</button>
-            <button id=${id3}>Up</button>
-            <select id=${id4} class="select">
+function switchesInSideCrrageCreation(id,id1,id2,id3,id4){
+    let sw1 = document.getElementById(id);
+    sw1.innerHTML = `
+                 <select id=${id1} class="select">
                 <option value="no">blank</option>
                 <option value="Floor 10">Pent House</option>
                 <option value="Floor 09">Floor 09</option>
@@ -43,7 +40,18 @@ function createTemplate(id,id1,id2,id3,id4,id5,no) {
                 <option value="Floor 00">Floor 00</option>
                 <option value="Floor -1">Floor -1</option>
             </select>
-            <button id=${id5}>Push</button>
+            <button id=${id2}>Push</button><br>
+            <button id=${id3}>emergency</button>
+            <button id=${id4}>Reset</button>
+            
+    `;
+}
+switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency","reset");
+
+function createTemplate(id,id1,id2,id3,id4,id5,no) {
+    let div = document.getElementById(id);
+    div.innerHTML = `<span id=${id1}>F0${no}</span>
+            <button id=${id2}>Dn</button><br>
                         
     `
 }
