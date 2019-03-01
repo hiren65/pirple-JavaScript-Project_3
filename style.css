@@ -36,7 +36,7 @@ h1{
 #carrage-A{
     width: 45%;
     height: 90%;
-    background-color: azure;
+    background-color: #d9dfda;
     border: darkblue;
     display: block;
     margin-left: 53%;
@@ -47,7 +47,7 @@ h1{
 #carrage-B{
      width: 45%;
      height: 90%;
-     background-color: azure;
+     background-color: #d9dfda;
      border: darkblue;
      display: block;
      margin-left: 2%;
@@ -89,6 +89,7 @@ h1{
     box-shadow: 3px 3px 5px #3f3f3f;
     background-color: rgba(226, 16, 38, 0.65);
     color: azure;
+    text-align: center;
 }
 #btn08L{
     border-radius: 35%;
@@ -109,4 +110,23 @@ select{
 i{
     padding: 5px;
     font-size:1.6em;
+    float: right;
+}
+#gate{
+    display: inline-block;
+    width: 2%;
+    height: 100%;
+    //border: 1px solid cornflowerblue;
+    background-color: crimson;
+}
+#last{
+    display: inline-block;
+    margin: 5px;
+    border: black 1px solid;
+
+    width: 75%;
+    position: relative;
+    top: -20px;
+
+
 }

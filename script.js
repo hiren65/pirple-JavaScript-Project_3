@@ -10,7 +10,7 @@ let checkForDouble = true;
 let checkForDouble1 = true;
 //for DIV id
 let tempT;let tempT1;
-
+let gatePos = 0;
 let positinObject = {
     "no":0,
     "Floor 10":0,
@@ -657,8 +657,58 @@ let resetAll = document.getElementById("reset");
 resetAll.addEventListener("click",resetCarrage);
 function resetCarrage() {
     clearInterval(tt);checkForDouble = true;checkForDouble1 = true;
-    this.style.color = "azure";
+    this.style.color = "white";
 }
+
+//gate open/close
+let last = document.getElementById("last");
+
+let gate = document.getElementById("gate");
+gatePos =  100;
+gate.style.color = "yellow";
+//alert("gg " + typeof gate.style.height);
+let open = true;
+function gateOpen(){
+    if (open){
+        gatePos--;
+        gate.style.height = gatePos + "%";
+        //gate.style.visibility = null;
+        last.style.top = 0;
+        if (gatePos === 0){
+            clearInterval(gg);
+        }
+    }
+     if (open === false){
+         gatePos++;
+         gate.style.height = gatePos + "%";
+         last.style.top = -20+ "px";
+         if (gatePos === 100){
+             clearInterval(gg);
+
+         }
+     }
+}
+let gg = setInterval(gateOpen,10);
+gg();
+
+
+
+
+
+
+
+/*document.getElementById("gate").animate([
+    // keyframes
+    { transform: 'translateY(0px)' },
+    { transform: 'translateY(-300px)' }
+    //gate.style.height = gate.style.height - "1%"
+
+], {
+    // timing options
+    duration: 1000,
+    iterations: Infinity
+});*/
+
 
 //automatic
 function autoSet(){

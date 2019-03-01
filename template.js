@@ -22,31 +22,33 @@
 
         </div>
  */
-function switchesInSideCrrageCreation(id,id1,id2,id3,id4){
+function switchesInSideCrrageCreation(id,id1,id2,id3,id4,id5,id6){
     let sw1 = document.getElementById(id);
     sw1.innerHTML = `
+                 <div id= ${id5}> </div>
+          <div id=${id6}>
                  <select id=${id1} class="select">
-                <option value="no">blank</option>
-                <option value="Floor 10">Pent House</option>
-                <option value="Floor 09">Floor 09</option>
-                <option value="Floor 08">Floor 08</option>
-                <option value="Floor 07">Floor 07</option>
-                <option value="Floor 06">Floor 06</option>
-                <option value="Floor 05">Floor 05</option>
-                <option value="Floor 04">Floor 04</option>
-                <option value="Floor 03">Floor 03</option>
-                <option value="Floor 02">Floor 02</option>
-                <option value="Floor 01">Floor 01</option>
-                <option value="Floor 00">Floor 00</option>
-                <option value="Floor -1">Floor -1</option>
-            </select>
-            <button id=${id2}>Push</button><br>
-            <button id=${id3}>emergency</button>
-            <button id=${id4}>Reset</button>
-            
+                        <option value="no">blank</option>
+                        <option value="Floor 10">Pent House</option>
+                        <option value="Floor 09">Floor 09</option>
+                        <option value="Floor 08">Floor 08</option>
+                        <option value="Floor 07">Floor 07</option>
+                        <option value="Floor 06">Floor 06</option>
+                        <option value="Floor 05">Floor 05</option>
+                        <option value="Floor 04">Floor 04</option>
+                        <option value="Floor 03">Floor 03</option>
+                        <option value="Floor 02">Floor 02</option>
+                        <option value="Floor 01">Floor 01</option>
+                        <option value="Floor 00">Floor 00</option>
+                        <option value="Floor -1">Floor -1</option>
+                 </select>
+                <button id=${id2}>Push</button><br>
+                <button id=${id3}>emergency</button>
+                <button id=${id4}>Reset</button>
+          </div>
     `;
 }
-switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency","reset");
+switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency","reset","gate","last");
 
 function createTemplate(id,id1,id2,id3,id4,id5,no) {
     let div = document.getElementById(id);
