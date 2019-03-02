@@ -10,7 +10,11 @@ let checkForDouble = true;
 let checkForDouble1 = true;
 //for DIV id
 let tempT;let tempT1;
-let gatePos = 0;
+//for lift gate position
+let gatePos = 100;
+//for lift gate
+let open = false;
+let gg;let gg1
 let positinObject = {
     "no":0,
     "Floor 10":0,
@@ -46,6 +50,7 @@ function goDown (){
         tempT1 = this.id;
 
         tt = setInterval( main ,10 );
+
 }
 /////////////////////////////////
 let list09 = document.getElementById("select09left");
@@ -238,7 +243,8 @@ function movingCarrageNagative() {
 
 function position(selected,time) {
 
-
+    open = true;
+    gatePos = 100;
     if (pos === 0 && selected === "no"){
         //alert();
         clearInterval(tt);
@@ -246,14 +252,16 @@ function position(selected,time) {
         pos = 0;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
-    if ((pos === 0 && selected === "Floor 10") || (pos === 0 && selected === "no")){
+    if ((pos === 0 && selected === "Floor 10") ){
         //alert();
         clearInterval(tt);
         //clearTimeout(time);
         pos = 0;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 105 && selected === "Floor 09"){
         //alert();
@@ -262,6 +270,10 @@ function position(selected,time) {
         pos = 105;
         existingPositionB = pos;
         checkForDouble1 = true;
+
+        //alert("jkjkj");
+        gg = setInterval(gateOpen,10);
+
     }
     if (pos === 210 && selected === "Floor 08"){
         //alert();
@@ -270,6 +282,8 @@ function position(selected,time) {
         pos = 210;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
+
     }
     if (pos === 315 && selected === "Floor 07"){
         //alert();
@@ -278,6 +292,7 @@ function position(selected,time) {
         pos = 315;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 420 && selected === "Floor 06"){
         //alert();
@@ -286,6 +301,7 @@ function position(selected,time) {
         pos = 420;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 525 && selected === "Floor 05"){
         //alert();
@@ -294,6 +310,7 @@ function position(selected,time) {
         pos = 525;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 630 && selected === "Floor 04"){
         //alert();
@@ -302,6 +319,7 @@ function position(selected,time) {
         pos = 630;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 735 && selected === "Floor 03"){
         //alert();
@@ -310,6 +328,7 @@ function position(selected,time) {
         pos = 735;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 840 && selected === "Floor 02"){
         //alert();
@@ -318,6 +337,7 @@ function position(selected,time) {
         pos = 840;
         existingPositionB = pos;
         checkForDouble1 = true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 945 && selected === "Floor 01"){
         //alert();
@@ -326,6 +346,7 @@ function position(selected,time) {
         pos = 945;
         existingPositionB = pos;
         checkForDouble1= true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 1050 && selected === "Floor 00"){
         //alert();
@@ -334,6 +355,7 @@ function position(selected,time) {
         pos = 1050;
         existingPositionB = pos;
         checkForDouble1= true;
+        gg = setInterval(gateOpen,10);
     }
     if (pos === 1155 && selected === "Floor -1"){
         //alert();
@@ -342,6 +364,7 @@ function position(selected,time) {
         pos = 1155;
         existingPositionB = pos;
         checkForDouble1= true;
+        gg = setInterval(gateOpen,10);
     }
 
 }
@@ -664,37 +687,56 @@ function resetCarrage() {
 let last = document.getElementById("last");
 
 let gate = document.getElementById("gate");
-gatePos =  100;
+
 gate.style.color = "yellow";
 //alert("gg " + typeof gate.style.height);
-let open = true;
+
+/* to open closed gate   open = true;gatePos = 100;*/
+
+//gg = setInterval(gateOpen,10);
+//gg1 = setInterval(gateOpen,10);
 function gateOpen(){
-    if (open){
+    //alert(open + " "+gatePos);
+    if (open === true){
+        //during opened gate other calling request makes uneffective
+        checkForDouble1 = false;
         gatePos--;
         gate.style.height = gatePos + "%";
+        //gate.style.top = 20 + "px";
         //gate.style.visibility = null;
-        last.style.top = 0;
-        if (gatePos === 0){
+        //last.style.top = -2 + "px";
+        if (gatePos <= 0){
+            gatePos = 0;
+            open = false;
             clearInterval(gg);
+            setTimeout(timeAutoCloseDoor,4000);
+
+            return;
         }
     }
      if (open === false){
          gatePos++;
          gate.style.height = gatePos + "%";
-         last.style.top = -20+ "px";
-         if (gatePos === 100){
+         //last.style.top = -15 + "px";
+         if (gatePos >= 100){
+             gatePos = 100;
+             open = true;
              clearInterval(gg);
-
+             //gate.style.top = 0 + "px";
+             return;
          }
      }
 }
-let gg = setInterval(gateOpen,10);
-gg();
+
+//gg();
 
 
 
 
-
+function timeAutoCloseDoor() {
+    gg =  setInterval(gateOpen,10);
+    checkForDouble1 = true;
+}
 
 
 /*document.getElementById("gate").animate([

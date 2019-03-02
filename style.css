@@ -71,25 +71,26 @@ h1{
 #reset{
     width: 35%;
     height: 30%;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     cursor: pointer;
     box-shadow: 3px 3px 5px #3f3f3f;
-    background-color: rgba(11, 17, 99, 0.65);
+    background-color: rgba(145, 165, 248, 0.65);
     color: azure;
 }
 #emergency{
-    width: 35%;
+    width: 45%;
     height: 30%;
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     cursor: pointer;
     box-shadow: 3px 3px 5px #3f3f3f;
-    background-color: rgba(226, 16, 38, 0.65);
+    background-color: rgba(226, 16, 38, 0.35);
     color: azure;
     text-align: center;
+    font-size: 0.80em;
 }
 #btn08L{
     border-radius: 35%;
@@ -118,15 +119,22 @@ i{
     height: 100%;
     //border: 1px solid cornflowerblue;
     background-color: crimson;
+    position: absolute;
+
+
 }
 #last{
     display: inline-block;
-    margin: 5px;
+    margin: 3%;
     border: black 1px solid;
 
     width: 75%;
     position: relative;
-    top: -20px;
+    top: 0px;
+    background-color: #f3efb4;
 
-
+}
+#select09left{
+    margin-left: 10px;
+    width: 38%;
 }

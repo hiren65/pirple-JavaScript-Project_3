@@ -45,7 +45,7 @@ function switchesInSideCrrageCreation(id,id1,id2,id3,id4,id5,id6){
                 <button id=${id2}>Push</button><br>
                 <button id=${id3}>emergency</button>
                 <button id=${id4}>Reset</button>
-          </div>
+          </div><i>B</i>
     `;
 }
 switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency","reset","gate","last");
@@ -53,7 +53,7 @@ switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency"
 function createTemplate(id,id1,id2,id3,id4,id5,no) {
     let div = document.getElementById(id);
     div.innerHTML = `<span id=${id1}>F0${no}</span>
-            <button id=${id2}>Dn</button><br>
+            <button id=${id2}>((o))</button><br>
                         
     `
 }
