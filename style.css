@@ -188,3 +188,24 @@ select{
     margin-right: 2%;
     margin-left: 98%;
 }
+#btn10R,#btn09R,#btn09RUp,#btnPush10R,#btnPush09R,
+#btnPush08R,#btn08RUp,#btn08R,#btnPush07R,#btn07RUp,#btn07R,
+#btnPush06R,#btn06RUp,#btn06R,#btnPush05R,#btn05RUp,#btn05R,
+#btnPush04R,#btn04RUp,#btn04R,#btnPush03R,#btn03RUp,#btn03R,
+#btnPush02R,#btn02RUp,#btn02R,#btnPush01R,#btn01RUp,#btn01R,
+#btnPush00R,#btn00RUp,#btn00R,#btnPush-1R,#btn-1RUp,#btn-1R,#btnPush09R,
+#reset11{
+    width: 35%;
+    height: 30%;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #3f3f3f;
+    background-color: rgba(145, 165, 248, 0.65);
+    color: azure;
+}
+#s10R,#s09R,#s08R,#s07R,#s06R,#s05R,#s04R,#s03R,#s02R,#s01R,#s00R,#s-1R{
+    padding: 5px;
+    color: #afe2af;
+}

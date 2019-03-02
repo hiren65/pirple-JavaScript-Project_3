@@ -1047,10 +1047,205 @@ function goDown11A(selected,existing){
             //return;
         }
     }
-
-
-
 };
+//////////////////////
+let b10DnA = document.getElementById("btn10R");
+b10DnA.addEventListener("click",callCarrageToMyFloorA);
+let b09DnA = document.getElementById("btn09R");
+b09DnA.addEventListener("click",callCarrageToMyFloorA);
+let b08DnA = document.getElementById("btn08R");
+b08DnA.addEventListener("click",callCarrageToMyFloorA);
+let b07DnA = document.getElementById("btn07R");
+b07DnA.addEventListener("click",callCarrageToMyFloorA);
+let b06DnA = document.getElementById("btn06R");
+b06DnA.addEventListener("click",callCarrageToMyFloorA);
+let b05DnA = document.getElementById("btn05R");
+b05DnA.addEventListener("click",callCarrageToMyFloorA);
+let b04DnA = document.getElementById("btn04R");
+b04DnA.addEventListener("click",callCarrageToMyFloorA);
+let b03DnA = document.getElementById("btn03R");
+b03DnA.addEventListener("click",callCarrageToMyFloorA);
+let b02DnA = document.getElementById("btn02R");
+b02DnA.addEventListener("click",callCarrageToMyFloorA);
+let b01DnA = document.getElementById("btn01R");
+b01DnA.addEventListener("click",callCarrageToMyFloorA);
+let b00DnA = document.getElementById("btn00R");
+b00DnA.addEventListener("click",callCarrageToMyFloorA);
+let b0_1DnA = document.getElementById("btn-1R");
+b0_1DnA.addEventListener("click",callCarrageToMyFloorA);
+
+///////////////
+function callCarrageToMyFloorA() {
+    //alert("no");
+    if (checkForDoubleA === false){
+        return;
+    }
+    if (checkForDoubleA1 === false){
+        return;
+    }
+
+    let txt1 = getInnerText(this.id );
+    temptT1A = txt1;
+    //console.log(txt1);
+    //alert( "ttttt" + checkForDouble);
+    //alert("tempt" + tempT + " " +txt1);
+    //buttonDisable(this.id);
+    if (txt1 === "b10R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b09R"){
+
+        //if (checkForDouble === true) {
+        //alert("ggg" + checkForDouble);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+        //}
+        //alert(txt1);
+
+    }
+    if (txt1 === "b08R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b07R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b06R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b05R"){
+
+        alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b04R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b03R"){
+
+        alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b02R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b01R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b00R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b-1R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+}
+function goHomeA() {
+    // checkForDouble = false;
+    //alert("jjjjjj"+ tempT);
+    if (temptT1A === "b10R"){
+        goDown1A("Floor 10");positionA("Floor 10",ttA);
+        if (posA === 0){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b09R"){
+        goDown1A("Floor 09");positionA("Floor 09",ttA);
+        if (posA === 0){
+            checkForDoubleA = true;
+        }
+
+    }
+    if (temptT1A === "b08R"){
+        goDown1A("Floor 08");positionA("Floor 08",ttA);
+        if (posA === 105){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b07R"){
+        goDown1A("Floor 07");positionA("Floor 07",ttA);
+        if (posA === 210){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b06R"){
+        goDown1A("Floor 06");positionA("Floor 06",ttA);
+        if (posA === 315){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b05R"){
+        goDown1A("Floor 05");positionA("Floor 05",ttA);
+        if (posA === 420){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b04R"){
+        goDown1A("Floor 04");positionA("Floor 04",ttA);
+        if (posA === 525){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b03R"){
+        goDown1A("Floor 03");positionA("Floor 03",ttA);
+        if (posA === 630){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b02R"){
+        goDown1A("Floor 02");positionA("Floor 02",ttA);
+        if (pos === 735){
+            checkForDouble = true;
+        }
+    }
+    if (temptT1A === "b01R"){
+        goDown1A("Floor 01");positionA("Floor 01",ttA);
+        if (posA === 840){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b00R"){
+        goDown1A("Floor 00");positionA("Floor 00",ttA);
+        if (posA === 945){
+            checkForDoubleA = true;
+        }
+    }
+    if (temptT1A === "b-1R"){
+        goDown1A("Floor 00");positionA("Floor -1",ttA);
+        if (posA === 1050){
+            checkForDoubleA = true;
+        }
+    }
+    //buttonAble();
+}
+
 
 //automatic
 function autoSet(){

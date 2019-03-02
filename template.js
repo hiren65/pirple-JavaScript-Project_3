@@ -68,3 +68,16 @@ createTemplate("b02L","s02L","btn02L","btn02LUp","select02left","btnPush02L",2);
 createTemplate("b01L","s01L","btn01L","btn01LUp","select01left","btnPush01L",1);
 createTemplate("b00L","s00L","btn00L","btn00LUp","select00left","btnPush00L",0);
 createTemplate("b-1L","s-1L","btn-1L","btn-1LUp","select-1left","btnPush-1L",-1);
+///////////////////
+createTemplate("b-1R","s-1R","btn-1R","btn-1RUp","select-1right","btnPush-1R",-1);
+createTemplate("b00R","s00R","btn00R","btn00RUp","select00right","btnPush00R",0);
+createTemplate("b01R","s01R","btn01R","btn01RUp","select01right","btnPush01R",1);
+createTemplate("b02R","s02R","btn02R","btn02RUp","select02right","btnPush02R",2);
+createTemplate("b03R","s03R","btn03R","btn03RUp","select03right","btnPush03R",3);
+createTemplate("b04R","s04R","btn04R","btn04RUp","select04right","btnPush04R",4);
+createTemplate("b05R","s05R","btn05R","btn05RUp","select05right","btnPush05R",5);
+createTemplate("b06R","s06R","btn06R","btn06RUp","select06right","btnPush06R",6);
+createTemplate("b07R","s07R","btn07R","btn07RUp","select07right","btnPush07R",7);
+createTemplate("b08R","s08R","btn08R","btn08RUp","select08right","btnPush08R",8);
+createTemplate("b09R","s09R","btn09R","btn09RUp","select09right","btnPush09R",9);
+createTemplate("b10R","s10R","btn10R","btn10RUp","select10right","btnPush10R",10);
