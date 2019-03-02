@@ -67,8 +67,19 @@ h1{
 #btnPush06L,#btn06LUp,#btn06L,#btnPush05L,#btn05LUp,#btn05L,
 #btnPush04L,#btn04LUp,#btn04L,#btnPush03L,#btn03LUp,#btn03L,
 #btnPush02L,#btn02LUp,#btn02L,#btnPush01L,#btn01LUp,#btn01L,
-#btnPush00L,#btn00LUp,#btn00L,#btnPush-1L,#btn-1LUp,#btn-1L,
+#btnPush00L,#btn00LUp,#btn00L,#btnPush-1L,#btn-1LUp,#btn-1L,#btnPush09R,
 #reset{
+    width: 35%;
+    height: 30%;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #3f3f3f;
+    background-color: rgba(145, 165, 248, 0.65);
+    color: azure;
+}
+#reset11{
     width: 35%;
     height: 30%;
     margin-left: 10px;
@@ -92,11 +103,25 @@ h1{
     text-align: center;
     font-size: 0.80em;
 }
-#btn08L{
+#emergency11{
+    width: 45%;
+    height: 30%;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #3f3f3f;
+    background-color: rgba(226, 16, 38, 0.35);
+    color: azure;
+    text-align: center;
+    font-size: 0.80em;
+}
+/*#btn08L{
     border-radius: 35%;
     width: 3.0rem;
     height: 2.5rem;
-}
+}*/
+
 select{
     margin: 10px 10px 10px 5px;
     width: 35%;
@@ -108,10 +133,19 @@ select{
     padding: 5px;
     color: #afe2af;
 }
-i{
+#i1{
     padding: 5px;
     font-size:1.6em;
     float: right;
+}
+#i2{
+    padding: 5px;
+    font-size:1.6em;
+    display: inline;
+    float: left;
+    position: relative;
+    top: -93px;
+    margin-left: 2px;
 }
 #gate{
     display: inline-block;
@@ -121,9 +155,11 @@ i{
     background-color: crimson;
     position: absolute;
 
-
 }
-#last{
+
+
+
+#last, #last11{
     display: inline-block;
     margin: 3%;
     border: black 1px solid;
@@ -132,9 +168,23 @@ i{
     position: relative;
     top: 0px;
     background-color: #f3efb4;
-
 }
-#select09left{
+#last11{
+    margin-right: 3%;
+    margin-left: 20%;
+}
+
+#select09left,#select09right{
     margin-left: 10px;
     width: 38%;
+}
+#gate11{
+    display: inline-block;
+    width: 2%;
+    height: 100%;
+    border: 1px solid cornflowerblue;
+    background-color: crimson;
+    position: absolute;
+    margin-right: 2%;
+    margin-left: 98%;
 }

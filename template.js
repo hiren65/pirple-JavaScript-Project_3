@@ -22,7 +22,7 @@
 
         </div>
  */
-function switchesInSideCrrageCreation(id,id1,id2,id3,id4,id5,id6){
+function switchesInSideCrrageCreation(id,id1,id2,id3,id4,id5,id6,id7,id8){
     let sw1 = document.getElementById(id);
     sw1.innerHTML = `
                  <div id= ${id5}> </div>
@@ -45,10 +45,14 @@ function switchesInSideCrrageCreation(id,id1,id2,id3,id4,id5,id6){
                 <button id=${id2}>Push</button><br>
                 <button id=${id3}>emergency</button>
                 <button id=${id4}>Reset</button>
-          </div><i>B</i>
+          </div><i id = ${id8}>${id7}</i>
     `;
 }
-switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency","reset","gate","last");
+switchesInSideCrrageCreation("carrage-B","select09left","btnPush09L","emergency","reset","gate","last","B","i1");
+
+
+switchesInSideCrrageCreation("carrage-A","select09right","btnPush09R","emergency11","reset11","gate11","last11","A","i2");
+
 
 function createTemplate(id,id1,id2,id3,id4,id5,no) {
     let div = document.getElementById(id);

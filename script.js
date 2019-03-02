@@ -2,6 +2,7 @@
 let carrageb = document.getElementById("carrage-B");
 carrageb.style.position = "relative";
 let pos = 0;
+let posA = 0;
 let tt,tt1;
 let existingPositionB = 0;
 let currentCallFloorPosition;
@@ -14,7 +15,19 @@ let tempT;let tempT1;
 let gatePos = 100;
 //for lift gate
 let open = false;
-let gg;let gg1
+let gg;let gg1;
+//////
+let carragea = document.getElementById("carrage-A");
+carragea.style.position = "relative";
+let checkForDoubleA1 = true;
+let checkForDoubleA = true;
+let ttA;
+let temptT1A;
+let existingPositionA = 0;
+let openA = false;
+let gatePosA = 100;
+let ggA;
+
 let positinObject = {
     "no":0,
     "Floor 10":0,
@@ -34,9 +47,6 @@ let list10 = document.getElementById("select10left");
 ////////////////
 let b10Dn = document.getElementById("btn10L");
 b10Dn.addEventListener("click",callCarrageToMyFloor);
-
-/*let b10PushL = document.getElementById("btnPush10L");
-b10PushL.addEventListener("click",goDown);*/
 
 function goDown (){
         if (checkForDouble1 === false){
@@ -61,15 +71,6 @@ b09Dn.addEventListener("click",callCarrageToMyFloor);
 let b09PushL = document.getElementById("btnPush09L");
 b09PushL.addEventListener("click",goDown);
 
-/*function goDown01 (){
-        if (checkForDouble === false){
-            return;
-        }
-        checkForDouble = false;
-        tempT1 = this.id;
-        tt = setInterval( main ,10 );
-
-}*/
 //////////////////////////////////////////
 let list08 = document.getElementById("select08left");
 //let list08 = document.getElementById("select08left");
@@ -77,8 +78,6 @@ let list08 = document.getElementById("select08left");
 let b08Dn = document.getElementById("btn08L");
 b08Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b08PushL = document.getElementById("btnPush08L");
-b08PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 
 let list07 = document.getElementById("select07left");
@@ -86,8 +85,6 @@ let list07 = document.getElementById("select07left");
 let b07Dn = document.getElementById("btn07L");
 b07Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b07PushL = document.getElementById("btnPush07L");
-b07PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 
 let list06 = document.getElementById("select06left");
@@ -95,56 +92,41 @@ let list06 = document.getElementById("select06left");
 let b06Dn = document.getElementById("btn06L");
 b06Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b06PushL = document.getElementById("btnPush06L");
-b06PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list05 = document.getElementById("select05left");
 
 let b05Dn = document.getElementById("btn05L");
 b05Dn.addEventListener("click",callCarrageToMyFloor);
 
-//let b05PushL = document.getElementById("btnPush05L");
-//b05PushL.addEventListener("click",goDown);
 //////////////////////////////
 let list04 = document.getElementById("select04left");
 
 let b04Dn = document.getElementById("btn04L");
 b04Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b04PushL = document.getElementById("btnPush04L");
-b04PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list03 = document.getElementById("select03left");
 
 let b03Dn = document.getElementById("btn03L");
 b03Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b03PushL = document.getElementById("btnPush03L");
-b03PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list02 = document.getElementById("select02left");
 
 let b02Dn = document.getElementById("btn02L");
 b02Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b02PushL = document.getElementById("btnPush02L");
-b02PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list01 = document.getElementById("select01left");
 
 let b01Dn = document.getElementById("btn01L");
 b01Dn.addEventListener("click",callCarrageToMyFloor);
 
-/*let b01PushL = document.getElementById("btnPush01L");
-b01PushL.addEventListener("click",goDown);*/
 //////////////////////////////
 let list00 = document.getElementById("select00left");
 
 let b00Dn = document.getElementById("btn00L");
 b00Dn.addEventListener("click",callCarrageToMyFloor);
-
-/*let b00PushL = document.getElementById("btnPush00L");
-b00PushL.addEventListener("click",goDown);*/
 
 //////////////////////////////
 //////////////////////////////
@@ -167,43 +149,11 @@ function main() {
         console.log(tempT1);
         goDown1(list09.value);position(list09.value,tt);
     }
-/*    if (tempT1 === "btnPush08L") {
-        goDown1(list08.value);position(list08.value,tt);
-    }
-    if (tempT1 === "btnPush07L") {
-        goDown1(list07.value);position(list07.value,tt);
-    }
-    if (tempT1 === "btnPush06L") {
-        goDown1(list06.value);position(list06.value,tt);
-    }
-    if (tempT1 === "btnPush05L") {
-        goDown1(list05.value);position(list05.value,tt);
-    }
-    if (tempT1 === "btnPush04L") {
-        goDown1(list04.value);position(list04.value,tt);
-    }
-    if (tempT1 === "btnPush03L") {
-        goDown1(list03.value);position(list03.value,tt);
-    }
-    if (tempT1 === "btnPush02L") {
-        goDown1(list02.value);position(list02.value,tt);
-    }
-    if (tempT1 === "btnPush01L") {
-        goDown1(list01.value);position(list01.value,tt);
-    }
-    if (tempT1 === "btnPush00L") {
-        goDown1(list00.value);position(list00.value,tt);
-    }
-    if (tempT1 === "btnPush-1L") {
-        goDown1(list_1.value);position(list_1.value,tt);
-    }*/
+
     //checkForDouble = true;
 }
-/*function main1() {
-    goDown1(list09.value);position(list09.value,tt);
-}*/
-/////////////////////////////////
 
+/////////////////////////////////
 function goDown1(selected){
 
     if (true){
@@ -738,6 +688,12 @@ function timeAutoCloseDoor() {
     checkForDouble1 = true;
 }
 
+document.getElementById("gate11").onclick = function(e){
+    alert(e.target.parentNode.id);
+}
+
+
+
 
 /*document.getElementById("gate").animate([
     // keyframes
@@ -750,6 +706,247 @@ function timeAutoCloseDoor() {
     duration: 1000,
     iterations: Infinity
 });*/
+
+let lastA = document.getElementById("last11");
+
+let gateA = document.getElementById("gate11");
+
+gateA.style.color = "yellow";
+
+let b09PushR = document.getElementById("btnPush09R");
+b09PushR.addEventListener("click",goDownForA);
+let list09A = document.getElementById("select09right");
+function goDownForA(){
+   // alert();
+    if (checkForDoubleA1 === false){
+        return;
+    }
+    if (checkForDoubleA === false){
+        return;
+    }
+    checkForDoubleA1 = false;
+    //alert(this.id);
+    temptT1A = this.id;
+
+    ttA = setInterval( mainA ,10 );
+}
+
+function mainA() {
+    console.log(temptT1A);
+    //alert(tempT);
+    /*if (tempT1 === "btnPush10L") {
+         goDown1(list10.value);position(list10.value,tt);
+     }*/
+
+    if (temptT1A === "btnPush09R") {
+        console.log(temptT1A);
+       // alert(list09A.value);
+
+        goDown1A(list09A.value);positionA(list09A.value,ttA);
+    }
+
+    //checkForDouble = true;
+}
+function goDown1A(selected){
+
+    if (true){
+
+        if (positinObject[selected]<existingPositionA){
+            movingCarrageNagativeA();
+        }if (positinObject[selected]>existingPositionA) {
+            movingCarrageA();
+        }if (positinObject[selected]===existingPositionA) {
+            //existingPositionB = pos;
+            carragea.style.top = existingPositionA + "px";
+            //clearInterval(tt);
+            //alert("hhhh");
+            //return;
+        }
+    }
+};
+
+function movingCarrageA() {
+    posA ++;
+    //carrageb.style.position = "relative";
+    console.log(posA);
+    carragea.style.top = posA + "px";
+    console.log(carragea.style.top );
+}
+function movingCarrageNagativeA() {
+    posA --;
+    //carrageb.style.position = "relative";
+    console.log(posA);
+    carragea.style.top = posA + "px";
+    console.log(carragea.style.top );
+}
+function positionA(selected,time) {
+
+    openA = true;
+    gatePosA = 100;
+
+    if (posA === 0 && selected === "no"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 0;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if ((posA === 0 && selected === "Floor 09") ){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 0;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 105 && selected === "Floor 08"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 105;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+
+        //alert("jkjkj");
+        ggA = setInterval(gateOpenA,10);
+
+    }
+    if (posA === 210 && selected === "Floor 07"){
+
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 210;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+
+    }
+    if (posA === 315 && selected === "Floor 06"){
+        alert(posA);
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 315;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 420 && selected === "Floor 05"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 420;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 525 && selected === "Floor 04"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(time);
+        posA = 525;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 630 && selected === "Floor 03"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(tt);
+        posA = 630;
+        existingPositionA = pos;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 735 && selected === "Floor 02"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(tt);
+        posA = 735;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 840 && selected === "Floor 01"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(tt);
+        posA = 840;
+        existingPositionA = posA;
+        checkForDoubleA1 = true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 945 && selected === "Floor 00"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(tt);
+        posA = 945;
+        existingPositionA = posA;
+        checkForDoubleA1= true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 1050 && selected === "Floor -1"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(tt);
+        posA = 1050;
+        existingPositionA = posA;
+        checkForDoubleA1= true;
+        ggA = setInterval(gateOpenA,10);
+    }
+    if (posA === 1155 && selected === "Floor -1"){
+        //alert();
+        clearInterval(ttA);
+        //clearTimeout(tt);
+        posA = 1155;
+        existingPositionA = posA;
+        checkForDoubleA1= true;
+        ggA = setInterval(gateOpenA,10);
+    }
+
+}
+
+function gateOpenA(){
+    //alert(open + " "+gatePos);
+    if (openA === true){
+        //during opened gate other calling request makes uneffective
+        checkForDoubleA1 = false;
+        gatePosA--;
+        gateA.style.height = gatePosA + "%";
+        //gate.style.top = 20 + "px";
+        //gate.style.visibility = null;
+        //last.style.top = -2 + "px";
+        if (gatePosA <= 0){
+            gatePosA = 0;
+            openA = false;
+            clearInterval(ggA);
+            setTimeout(timeAutoCloseDoorA,4000);
+
+            return;
+        }
+    }
+    if (openA === false){
+        gatePosA++;
+        gateA.style.height = gatePosA + "%";
+        //last.style.top = -15 + "px";
+        if (gatePosA >= 100){
+            gatePosA = 100;
+            openA = true;
+            clearInterval(ggA);
+            //gate.style.top = 0 + "px";
+            return;
+        }
+    }
+}
+function timeAutoCloseDoorA() {
+    ggA =  setInterval(gateOpenA,10);
+    checkForDoubleA1 = true;
+}
+
+
+
 
 
 //automatic
