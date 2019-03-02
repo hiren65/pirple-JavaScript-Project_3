@@ -945,9 +945,112 @@ function timeAutoCloseDoorA() {
     checkForDoubleA1 = true;
 }
 
+//////
+let emergencyA = document.getElementById("emergency11");
+emergencyA.addEventListener("click",stopCarrageA);
+function stopCarrageA(){
+    //alert(pos);
+    clearInterval(ttA);
+    ttA =  setInterval(kkA,10);
+    checkForDoubleA = false;checkForDoubleA1 = false;
+    let ebtnA = document.getElementById("reset11");
+    ebtnA.style.color = "#afe2af";
+
+}
+let resetAllA = document.getElementById("reset11");
+resetAllA.addEventListener("click",resetCarrageA);
+function resetCarrageA() {
+    clearInterval(ttA);checkForDoubleA = true;checkForDoubleA1 = true;
+    this.style.color = "white";
+}
+function kkA(){
+    if (posA >= 0 && posA < 105 ){
+        //alert(1);
+
+        goDown11A(positinObject["Floor 10"],posA);positionA("Floor 10",ttA);
+    }
+    if (posA >= 105 && posA < 210 ){
+        //alert(2);
+        //goDown1("Floor 09");position("Floor 09",tt);
+        goDown11A(positinObject["Floor 09"],posA);positionA("Floor 09",ttA);
+        //clearInterval(tt);
+        //clearTimeout(time);
+
+    }
+    if (posA >= 210 && posA < 315 ){
+        //alert(3);
+        // goDown1("Floor 08");position("Floor 08",tt);
+        goDown11A(positinObject["Floor 08"],posA);positionA("Floor 08",ttA);
+
+    }
+    if (posA >= 315 && posA < 420 ){
+        // alert(4);
+        //goDown1("Floor 07");position("Floor 07",tt);
+        goDown11A(positinObject["Floor 07"],posA);positionA("Floor 07",ttA);
+    }
+    if (posA >= 420 && posA < 525 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 06"],posA);positionA("Floor 06",ttA);
+
+    }
+    if (posA >= 525 && posA < 630 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 05"],posA);positionA("Floor 05",ttA);
+
+    }
+    if (posA >= 630 && posA < 735 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 04"],posA);positionA("Floor 04",ttA);
+
+    }
+    if (posA >= 735 && posA < 840 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 03"],posA);positionA("Floor 03",ttA);
+
+    }
+    if (posA >= 840 && posA < 945 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 02"],pos);positionA("Floor 02",ttA);
+
+    }
+    if (posA >= 945 && posA < 1050 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 01"],posA);positionA("Floor 01",ttA);
+
+    }
+    if (posA >= 1050 && posA < 1155 ){
+        //alert(5);
+        //goDown1("Floor 06");position("Floor 06",tt);
+        goDown11A(positinObject["Floor 00"],posA);positionA("Floor 00",ttA);
+
+    }
+}
+function goDown11A(selected,existing){
+
+    if (true){
+        //alert(selected + " " + existing);
+        if (selected<existing){
+            movingCarrageNagativeA();
+        }if (selected>existing) {
+            movingCarrageA();
+        }if (selected===existing) {
+            //existingPositionB = pos;
+            carragea.style.top = existing + "px";
+            //clearInterval(tt);
+            //alert("hhhh");
+            //return;
+        }
+    }
 
 
 
+};
 
 //automatic
 function autoSet(){
