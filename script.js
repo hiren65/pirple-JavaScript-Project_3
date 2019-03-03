@@ -796,16 +796,16 @@ function goDown1A(selected){
 function movingCarrageA() {
     posA ++;
     //carrageb.style.position = "relative";
-    console.log(posA);
+    //console.log(posA);
     carragea.style.top = posA + "px";
-    console.log(carragea.style.top );
+    //console.log(carragea.style.top );
 }
 function movingCarrageNagativeA() {
     posA --;
     //carrageb.style.position = "relative";
-    console.log(posA);
+    //console.log(posA);
     carragea.style.top = posA + "px";
-    console.log(carragea.style.top );
+    //console.log(carragea.style.top );
 }
 function positionA(selected,time) {
 
@@ -935,9 +935,11 @@ function positionA(selected,time) {
     }
 
 }
-
+let timerA;
+//let timerA = setTimeout(timeAutoCloseDoorA,3000);
 function gateOpenA(){
     //alert(open + " "+gatePos);
+    //let timerA = setTimeout(timeAutoCloseDoorA,3000);
     if (openA === true){
         //during opened gate other calling request makes uneffective
         checkForDoubleA1 = false;
@@ -950,8 +952,8 @@ function gateOpenA(){
             gatePosA = 0;
             openA = false;
             clearInterval(ggA);
-            setTimeout(timeAutoCloseDoorA,4000);
-
+            //setTimeout(timeAutoCloseDoorA,4000);
+            timerA = setTimeout(timeAutoCloseDoorA,3000);
             return;
         }
     }
@@ -964,6 +966,7 @@ function gateOpenA(){
             openA = true;
             clearInterval(ggA);
             //gate.style.top = 0 + "px";
+            window.clearTimeout(timerA);
             return;
         }
     }
@@ -971,6 +974,7 @@ function gateOpenA(){
 function timeAutoCloseDoorA() {
     ggA =  setInterval(gateOpenA,10);
     checkForDoubleA1 = true;
+    //checkForDoubleA = true;
 }
 
 //////
@@ -1282,6 +1286,173 @@ function goHomeA() {
 
 
 //automatic
+let libraryForCall = {
+    0 :   "b10R",
+    1 :   "b09R",
+    2 :   "b08R",
+    3 :   "b07R",
+    4 :   "b06R",
+    5 :   "b05R",
+    6 :   "b04R",
+    7 :   "b03R",
+    8 :   "b02R",
+    9 :   "b01R",
+    10 :   "b00R",
+    11 :   "b-1R",
+};
+let saveArr = [];
+function ggggg(xxxx) {
+    callCarrageToMyFloorAAutomatic(xxxx);
+}
 function autoSet(){
 
+
+         function timeout() {
+             let play = 11*Math.random();
+             //alert( Math.floor(play+1));
+             let aa = Math.floor(play+1);
+
+
+             let  yy = libraryForCall[aa];
+             setTimeout(function () {
+                 // Do Something Here
+                 // Then recall the parent function to
+                 // create a recursive loop.
+                 console.log("yy " + yy + " no " + aa);
+                 ggggg(yy);
+                 //alert(aa + " " + yy);
+                 timeout();
+             }, 4000);
+         }
+         timeout();
+
 }
+function createRandonNo(){
+    for (let i=0;i<5;i++){
+        let play = 3*Math.random();
+        //alert( Math.floor(play+1));
+        let aa = Math.floor(play+1);
+        saveArr.push(aa);
+    }
+    //alert(saveArr);
+}
+
+function callCarrageToMyFloorAAutomatic(call) {
+    //alert("no");
+    //alert(e.target.id);
+
+    if (checkForDoubleA === false){
+        return;
+    }
+    if (checkForDoubleA1 === false){
+
+
+        return;
+    }
+    if (call === "btn10R") {
+        // This Carrage can not reach floor 10
+        return;
+    }
+
+    let txt1 = call;
+    temptT1A = txt1;
+    //console.log(txt1);
+    //alert( "ttttt" + checkForDouble);
+    //alert("tempt" + tempT + " " +txt1);
+    //buttonDisable(this.id);
+    if (txt1 === "b10R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b09R"){
+
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+
+    }
+    if (txt1 === "b08R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b07R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b06R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b05R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b04R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b03R"){
+
+        // alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b02R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b01R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b00R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+    if (txt1 === "b-1R"){
+
+        //alert(txt1);
+        checkForDoubleA = false;
+        ttA = setInterval( goHomeA ,10 );
+    }
+}
+
+let set = document.getElementById("play");
+set.addEventListener("click",startGame);
+
+function startGame() {
+    let opt1 = document.getElementById("manual");
+    let opt2 = document.getElementById("auto");
+
+    if (opt1.checked){
+        location.reload();
+        alert("opt1" + opt1.checked);
+    }
+    if (opt2.checked){
+        //location.reload();
+        alert("opt2 " + opt2.checked);
+        autoSet();
+    }
+
+}
+
+
+
+//

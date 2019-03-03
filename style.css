@@ -209,6 +209,22 @@ select{
     padding: 5px;
     color: #afe2af;
 }
+#setMode{
+    width: 99%;
+    height: 35px;
+    background-color: #d9dfda;
+    padding: 10px;
+}
+#manual,#auto{
+    display: inline;
+    margin: 10px;
+}
+#play{
+    width: 10%;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
 @media only screen and (max-width: 320px) {
 
     body {
