@@ -43,6 +43,21 @@ let positinObject = {
     "Floor 00":1050,
     "Floor -1":1155,
 };
+let positinObjectA = {
+    "no":0,
+    "Floor 10":0,
+    "Floor 09":0,
+    "Floor 08":105,
+    "Floor 07":210,
+    "Floor 06":315,
+    "Floor 05":420,
+    "Floor 04":525,
+    "Floor 03":630,
+    "Floor 02":735,
+    "Floor 01":840,
+    "Floor 00":945,
+    "Floor -1":1050,
+};
 let list10 = document.getElementById("select10left");
 ////////////////
 let b10Dn = document.getElementById("btn10L");
@@ -53,6 +68,10 @@ function goDown (){
             return;
         }
     if (checkForDouble === false){
+        return;
+    }
+    if (list09.value === "Floor -1"){
+
         return;
     }
         checkForDouble1 = false;
@@ -145,6 +164,7 @@ function main() {
    /*if (tempT1 === "btnPush10L") {
         goDown1(list10.value);position(list10.value,tt);
     }*/
+
     if (tempT1 === "btnPush09L") {
         console.log(tempT1);
         goDown1(list09.value);position(list09.value,tt);
@@ -689,8 +709,8 @@ function timeAutoCloseDoor() {
 }
 
 document.getElementById("gate11").onclick = function(e){
-    alert(e.target.parentNode.id);
-}
+    // alert(e.target.parentNode.id);
+};
 
 
 
@@ -724,6 +744,13 @@ function goDownForA(){
     if (checkForDoubleA === false){
         return;
     }
+    //alert(list09A.value);
+    if (list09A.value === "blank" || list09A.value === "Floor 10"){
+        clearInterval(ttA);
+        return;
+    }
+
+
     checkForDoubleA1 = false;
     //alert(this.id);
     temptT1A = this.id;
@@ -748,19 +775,20 @@ function mainA() {
     //checkForDouble = true;
 }
 function goDown1A(selected){
+    //alert(positinObjectA[selected] + " " + existingPositionA);
 
     if (true){
 
-        if (positinObject[selected]<existingPositionA){
+        if (positinObjectA[selected]<existingPositionA){
             movingCarrageNagativeA();
-        }if (positinObject[selected]>existingPositionA) {
+        }if (positinObjectA[selected]>existingPositionA) {
             movingCarrageA();
-        }if (positinObject[selected]===existingPositionA) {
+        }if (positinObjectA[selected]===existingPositionA) {
             //existingPositionB = pos;
             carragea.style.top = existingPositionA + "px";
             //clearInterval(tt);
             //alert("hhhh");
-            //return;
+           // return;
         }
     }
 };
@@ -825,7 +853,7 @@ function positionA(selected,time) {
 
     }
     if (posA === 315 && selected === "Floor 06"){
-        alert(posA);
+        // alert(posA);
         clearInterval(ttA);
         //clearTimeout(time);
         posA = 315;
@@ -856,7 +884,7 @@ function positionA(selected,time) {
         clearInterval(ttA);
         //clearTimeout(tt);
         posA = 630;
-        existingPositionA = pos;
+        existingPositionA = posA;
         checkForDoubleA1 = true;
         ggA = setInterval(gateOpenA,10);
     }
@@ -1075,12 +1103,17 @@ let b0_1DnA = document.getElementById("btn-1R");
 b0_1DnA.addEventListener("click",callCarrageToMyFloorA);
 
 ///////////////
-function callCarrageToMyFloorA() {
+function callCarrageToMyFloorA(e) {
     //alert("no");
+    //alert(e.target.id);
     if (checkForDoubleA === false){
         return;
     }
     if (checkForDoubleA1 === false){
+        return;
+    }
+    if (e.target.id === "btn10R") {
+        // This Carrage can not reach floor 10
         return;
     }
 
@@ -1126,7 +1159,7 @@ function callCarrageToMyFloorA() {
     }
     if (txt1 === "b05R"){
 
-        alert(txt1);
+        //alert(txt1);
         checkForDoubleA = false;
         ttA = setInterval( goHomeA ,10 );
     }
@@ -1138,7 +1171,7 @@ function callCarrageToMyFloorA() {
     }
     if (txt1 === "b03R"){
 
-        alert(txt1);
+        // alert(txt1);
         checkForDoubleA = false;
         ttA = setInterval( goHomeA ,10 );
     }
@@ -1170,6 +1203,7 @@ function callCarrageToMyFloorA() {
 function goHomeA() {
     // checkForDouble = false;
     //alert("jjjjjj"+ tempT);
+
     if (temptT1A === "b10R"){
         goDown1A("Floor 10");positionA("Floor 10",ttA);
         if (posA === 0){
@@ -1221,8 +1255,8 @@ function goHomeA() {
     }
     if (temptT1A === "b02R"){
         goDown1A("Floor 02");positionA("Floor 02",ttA);
-        if (pos === 735){
-            checkForDouble = true;
+        if (posA === 735){
+            checkForDoubleA = true;
         }
     }
     if (temptT1A === "b01R"){

@@ -101,7 +101,7 @@ h1{
     background-color: rgba(226, 16, 38, 0.35);
     color: azure;
     text-align: center;
-    font-size: 0.80em;
+    font-size: 0.80rem;
 }
 #emergency11{
     width: 45%;
@@ -114,7 +114,7 @@ h1{
     background-color: rgba(226, 16, 38, 0.35);
     color: azure;
     text-align: center;
-    font-size: 0.80em;
+    font-size: 0.80rem;
 }
 /*#btn08L{
     border-radius: 35%;
@@ -208,4 +208,18 @@ select{
 #s10R,#s09R,#s08R,#s07R,#s06R,#s05R,#s04R,#s03R,#s02R,#s01R,#s00R,#s-1R{
     padding: 5px;
     color: #afe2af;
+}
+@media only screen and (max-width: 320px) {
+
+    body {
+        font-size: 0.5em;
+    }
+
+}
+@media only screen and (max-width: 420px) {
+
+    body {
+        font-size: 1em;
+    }
+
 }
