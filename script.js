@@ -27,6 +27,7 @@ let existingPositionA = 0;
 let openA = false;
 let gatePosA = 100;
 let ggA;
+let autoRequestCount;
 
 let positinObject = {
     "no":0,
@@ -1327,9 +1328,16 @@ function ggggg(xxxx) {
 function gggggL(xxxx) {
     callCarrageToMyFloorBAutomatic(xxxx);
 }
+let tlCt = document.getElementById("totalCount");
+tlCt.innerText = 'Total Count';
+
+let psg_A = document.getElementById("timeElapsedA");
+let psgATimeCount = 0;
 function autoSet(){
-
-
+        let filledAutoRequestCount = document.getElementById("txtBox");
+        let check = filledAutoRequestCount.value;
+        alert(check);
+         autoRequestCount = 0;
          function timeout() {
              let play = 11*Math.random();
              //alert( Math.floor(play+1));
@@ -1342,6 +1350,11 @@ function autoSet(){
 
              let  yy = libraryForCall[aa];
              let  yyL = libraryForCallB[aaL];
+
+             if (autoRequestCount >= check){
+                 alert("time count" + autoRequestCount);
+                 location.reload();
+             }
              setTimeout(function () {
                  // Do Something Here
                  // Then recall the parent function to
@@ -1350,6 +1363,7 @@ function autoSet(){
                  console.log("yyL " + yyL + " noL " + aaL);
                  ggggg(yy);
                  gggggL(yyL);
+
                  //alert(aa + " " + yy);
                  timeout();
              }, 4000);
@@ -1385,6 +1399,8 @@ function callCarrageToMyFloorAAutomatic(call) {
         return;
     }
 
+    autoRequestCount++;
+    tlCt.innerText = `Total Count/Requests ${autoRequestCount} `;
     let txt1 = call;
     temptT1A = txt1;
     //console.log(txt1);
@@ -1477,11 +1493,12 @@ function callCarrageToMyFloorBAutomatic(call) {
 
         return;
     }
-    if (call === "btn-1L") {
+    if (call === "b-1L") {
         // This Carrage can not reach floor 10
         return;
     }
-
+    autoRequestCount++;
+    tlCt.innerText = `Total Count/requests ${autoRequestCount} `;
     let txt1 = call;
     tempT = txt1;
     //console.log(txt1);

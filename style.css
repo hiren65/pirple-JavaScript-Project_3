@@ -223,7 +223,19 @@ select{
     width: 10%;
     height: 30px;
     margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer;
+}
+#txtBox{
+    width: 10%;
+    height: 30px;
+    margin-left: 20px;
+    text-align: center;
+}
+#totalCount{
+    margin-left: 5px;
+    color: darksalmon;
+    margin-right: 5px;
 }
 @media only screen and (max-width: 320px) {
 
