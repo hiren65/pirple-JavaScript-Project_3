@@ -958,8 +958,8 @@ function gateOpenA(){
             gatePosA = 0;
             openA = false;
             clearInterval(ggA);
-            //setTimeout(timeAutoCloseDoorA,4000);
-            timerA = setTimeout(timeAutoCloseDoorA,3000);
+            setTimeout(timeAutoCloseDoorA,4000);
+            //timerA = setTimeout(timeAutoCloseDoorA,3000);
             return;
         }
     }
@@ -972,7 +972,7 @@ function gateOpenA(){
             openA = true;
             clearInterval(ggA);
             //gate.style.top = 0 + "px";
-            window.clearTimeout(timerA);
+            //window.clearTimeout(timerA);
             checkForDoubleA1 = true;
             return;
         }
