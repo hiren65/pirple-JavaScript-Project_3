@@ -339,11 +339,15 @@ function position(selected,time) {
 
 }
 
-function callCarrageToMyFloor() {
+function callCarrageToMyFloor(e) {
     if (checkForDouble === false){
         return;
     }
     if (checkForDouble1 === false){
+        return;
+    }
+    if (e.target.id === "btn-1L") {
+        // This Carrage can not reach floor -1
         return;
     }
     let txt1 = getInnerText(this.id );
@@ -692,6 +696,7 @@ function gateOpen(){
              gatePos = 100;
              open = true;
              clearInterval(gg);
+             checkForDouble1 = true;
              //gate.style.top = 0 + "px";
              return;
          }
@@ -705,7 +710,7 @@ function gateOpen(){
 
 function timeAutoCloseDoor() {
     gg =  setInterval(gateOpen,10);
-    checkForDouble1 = true;
+    //checkForDouble1 = true;
 }
 
 document.getElementById("gate11").onclick = function(e){
@@ -1301,9 +1306,26 @@ let libraryForCall = {
     10 :   "b00R",
     11 :   "b-1R",
 };
+let libraryForCallB = {
+    0 :   "b10L",
+    1 :   "b09L",
+    2 :   "b08L",
+    3 :   "b07L",
+    4 :   "b06L",
+    5 :   "b05L",
+    6 :   "b04L",
+    7 :   "b03L",
+    8 :   "b02L",
+    9 :   "b01L",
+    10 :   "b00L",
+    11 :   "b-1L",
+};
 let saveArr = [];
 function ggggg(xxxx) {
     callCarrageToMyFloorAAutomatic(xxxx);
+}
+function gggggL(xxxx) {
+    callCarrageToMyFloorBAutomatic(xxxx);
 }
 function autoSet(){
 
@@ -1313,14 +1335,21 @@ function autoSet(){
              //alert( Math.floor(play+1));
              let aa = Math.floor(play+1);
 
+             let playL = 11*Math.random();
+             //alert( Math.floor(play+1));
+             let aaL = Math.floor(playL+1);
+
 
              let  yy = libraryForCall[aa];
+             let  yyL = libraryForCallB[aaL];
              setTimeout(function () {
                  // Do Something Here
                  // Then recall the parent function to
                  // create a recursive loop.
                  console.log("yy " + yy + " no " + aa);
+                 console.log("yyL " + yyL + " noL " + aaL);
                  ggggg(yy);
+                 gggggL(yyL);
                  //alert(aa + " " + yy);
                  timeout();
              }, 4000);
@@ -1328,7 +1357,8 @@ function autoSet(){
          timeout();
 
 }
-function createRandonNo(){
+/////////////
+/*function createRandonNo(){
     for (let i=0;i<5;i++){
         let play = 3*Math.random();
         //alert( Math.floor(play+1));
@@ -1336,8 +1366,8 @@ function createRandonNo(){
         saveArr.push(aa);
     }
     //alert(saveArr);
-}
-
+}*/
+//////////////////////
 function callCarrageToMyFloorAAutomatic(call) {
     //alert("no");
     //alert(e.target.id);
@@ -1432,6 +1462,103 @@ function callCarrageToMyFloorAAutomatic(call) {
         //alert(txt1);
         checkForDoubleA = false;
         ttA = setInterval( goHomeA ,10 );
+    }
+}
+////
+function callCarrageToMyFloorBAutomatic(call) {
+    //alert("no");
+    //alert(e.target.id);
+
+    if (checkForDouble === false){
+        return;
+    }
+    if (checkForDouble1 === false){
+
+
+        return;
+    }
+    if (call === "btn-1L") {
+        // This Carrage can not reach floor 10
+        return;
+    }
+
+    let txt1 = call;
+    tempT = txt1;
+    //console.log(txt1);
+    //alert( "ttttt" + checkForDouble);
+    //alert("tempt" + tempT + " " +txt1);
+    //buttonDisable(this.id);
+    if (txt1 === "b10L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b09L"){
+
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+
+    }
+    if (txt1 === "b08L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b07L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b06L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b05L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b04L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b03L"){
+
+        // alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b02L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b01L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b00L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
+    }
+    if (txt1 === "b-1L"){
+
+        //alert(txt1);
+        checkForDouble = false;
+        tt = setInterval( goHome ,10 );
     }
 }
 
