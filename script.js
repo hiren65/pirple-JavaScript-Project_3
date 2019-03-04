@@ -967,13 +967,14 @@ function gateOpenA(){
             clearInterval(ggA);
             //gate.style.top = 0 + "px";
             window.clearTimeout(timerA);
+            checkForDoubleA1 = true;
             return;
         }
     }
 }
 function timeAutoCloseDoorA() {
     ggA =  setInterval(gateOpenA,10);
-    checkForDoubleA1 = true;
+    //checkForDoubleA1 = true;
     //checkForDoubleA = true;
 }
 
