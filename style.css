@@ -211,9 +211,10 @@ select{
 }
 #setMode{
     width: 99%;
-    height: 35px;
+    height: auto;
     background-color: #d9dfda;
     padding: 10px;
+
 }
 #manual,#auto{
     display: inline;
@@ -230,12 +231,47 @@ select{
     width: 10%;
     height: 30px;
     margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
 }
 #totalCount{
     margin-left: 5px;
     color: darksalmon;
     margin-right: 5px;
+    display: inline;
+}
+#timeElapsedA,#timeElapsedB{
+    width: 5%;
+    font-size: 1.2rem;
+    display: inline;
+    margin-left: 10px;
+}
+label{
+    font-size: 1.0rem;
+    color: #3f3f3f;
+    margin-top: 5px;
+}
+#lblB,#lblA,#passengerC{
+    color: crimson;
+    padding: 5px;
+}
+em{
+    color: darkgray;
+}
+#nav2,#nav1{
+    margin-top: 2px;
+    display: block;
+    width: 100%;
+    background-color: #d9dfda;
+    margin-left: auto;margin-right: auto;
+    /*border: 1px solid #294de9;*/
+    align-items: center;
+   text-align: center;
+}
+#nav2{
+    background-color: #eed5b5;
+    border: black 1px solid;
+    border-radius:15px;
 }
 @media only screen and (max-width: 320px) {
 

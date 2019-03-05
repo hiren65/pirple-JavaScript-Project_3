@@ -685,7 +685,9 @@ function gateOpen(){
             open = false;
             clearInterval(gg);
             setTimeout(timeAutoCloseDoor,4000);
-
+            //when gates open passengers travelling time over
+            clearInterval(setTimerB);
+            myCountB = 0;
             return;
         }
     }
@@ -960,6 +962,9 @@ function gateOpenA(){
             clearInterval(ggA);
             setTimeout(timeAutoCloseDoorA,4000);
             //timerA = setTimeout(timeAutoCloseDoorA,3000);
+            //when gates open passengers travelling time over
+            clearInterval(setTimer);
+            myCount = 0;
             return;
         }
     }
@@ -1329,10 +1334,28 @@ function gggggL(xxxx) {
     callCarrageToMyFloorBAutomatic(xxxx);
 }
 let tlCt = document.getElementById("totalCount");
-tlCt.innerText = 'Total Count';
+//tlCt.innerText = 'Total Count';
 
 let psg_A = document.getElementById("timeElapsedA");
 let psgATimeCount = 0;
+// set timer for passengers in Lift A
+let setTimer ;
+let myCount = 0;
+let timerCounter = function () {
+    //document.getElementById("timeElapsedA").innerText ="Passenger In A " +  ++myCount + " Seconds";
+    document.getElementById("timeElapsedA").innerHTML ="<label>Travelling Time: </label>"
+        +"<label> Passenger In A </label>" +
+        "<label id='lblA'>"+ ++myCount + "</label>"  +
+        "<label>Seconds</label> ";
+};
+
+// set timer for passengers in Lift B
+let setTimerB ;
+let myCountB = 0;
+let timerCounterB = function () {
+    document.getElementById("timeElapsedB").innerHTML = "<label> Passenger In B </label>" +  "<label id='lblB'>"+ ++myCountB + "</label>"  + "<label>Seconds</label> ";
+};
+
 function autoSet(){
         let filledAutoRequestCount = document.getElementById("txtBox");
         let check = filledAutoRequestCount.value;
@@ -1398,9 +1421,12 @@ function callCarrageToMyFloorAAutomatic(call) {
         // This Carrage can not reach floor 10
         return;
     }
+    // for Passengers in Lift A TIME STARTS
+    setTimer = setInterval(timerCounter,1000);
+
 
     autoRequestCount++;
-    tlCt.innerText = `Total Count/Requests ${autoRequestCount} `;
+    tlCt.innerHTML = ` <em> Total Count/Requests </em> <span id="passengerC">${autoRequestCount}</span>  `;
     let txt1 = call;
     temptT1A = txt1;
     //console.log(txt1);
@@ -1497,8 +1523,11 @@ function callCarrageToMyFloorBAutomatic(call) {
         // This Carrage can not reach floor 10
         return;
     }
+    //Passenger traveling time
+    setTimerB = setInterval(timerCounterB,1000);
     autoRequestCount++;
-    tlCt.innerText = `Total Count/requests ${autoRequestCount} `;
+    tlCt.innerHTML = ` <em> Total Count/Requests </em> <span id="passengerC">${autoRequestCount}</span>  `;
+    //tlCt.innerText = `Total Count/requests ${autoRequestCount} `;
     let txt1 = call;
     tempT = txt1;
     //console.log(txt1);
