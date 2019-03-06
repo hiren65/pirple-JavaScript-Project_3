@@ -1128,7 +1128,7 @@ function callCarrageToMyFloorA(e) {
     if (checkForDoubleA1 === false){
         return;
     }
-    if (e.target.id === "btn10R") {
+    if (e.target.id === "b10R") {
         // This Carrage can not reach floor 10
         return;
     }
@@ -1359,7 +1359,7 @@ let timerCounterB = function () {
 function autoSet(){
         let filledAutoRequestCount = document.getElementById("txtBox");
         let check = filledAutoRequestCount.value;
-        alert(check);
+        //alert(check);
          autoRequestCount = 0;
          function timeout() {
              let play = 11*Math.random();
@@ -1371,11 +1371,11 @@ function autoSet(){
              let aaL = Math.floor(playL+1);
 
 
-             let  yy = libraryForCall[aa];
+             let  yy = libraryForCall[aa];//saveArr.push(yy);
              let  yyL = libraryForCallB[aaL];
-
+                console.log( aa+" "+ yy);
              if (autoRequestCount >= check){
-                 alert("time count" + autoRequestCount);
+                 //alert("time count" + autoRequestCount);
                  location.reload();
              }
              setTimeout(function () {
@@ -1421,6 +1421,7 @@ function callCarrageToMyFloorAAutomatic(call) {
         // This Carrage can not reach floor 10
         return;
     }
+    //saveArr.shift();
     // for Passengers in Lift A TIME STARTS
     setTimer = setInterval(timerCounter,1000);
 
@@ -1617,11 +1618,11 @@ function startGame() {
 
     if (opt1.checked){
         location.reload();
-        alert("opt1" + opt1.checked);
+        //alert("opt1" + opt1.checked);
     }
     if (opt2.checked){
         //location.reload();
-        alert("opt2 " + opt2.checked);
+        //alert("opt2 " + opt2.checked);
         autoSet();
     }
 

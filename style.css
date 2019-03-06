@@ -18,6 +18,7 @@ h1{
     grid-gap: 5px;
 
 }
+
 .sideBoxL{
     grid-column: 1/2;
     border: 1px solid black;
@@ -43,6 +44,9 @@ h1{
     margin-right: auto;
     margin-top: -10px;
     box-shadow: 3px 3px 5px grey;
+    border-top : 1px red solid;
+    border-bottom : 1px red solid;
+    border-left : 1px red solid;
 }
 #carrage-B{
      width: 45%;
@@ -54,6 +58,9 @@ h1{
      margin-right: auto;
      margin-top: -10px;
      box-shadow: 3px 3px 5px grey;
+    border-top : 1px red solid;
+    border-bottom : 1px red solid;
+    border-right : 1px red solid;
  }
 
 .deadEnd{
@@ -68,7 +75,7 @@ h1{
 #btnPush04L,#btn04LUp,#btn04L,#btnPush03L,#btn03LUp,#btn03L,
 #btnPush02L,#btn02LUp,#btn02L,#btnPush01L,#btn01LUp,#btn01L,
 #btnPush00L,#btn00LUp,#btn00L,#btnPush-1L,#btn-1LUp,#btn-1L,#btnPush09R,
-#reset{
+#reset {
     width: 35%;
     height: 30%;
     margin-left: 10px;
@@ -78,6 +85,9 @@ h1{
     box-shadow: 3px 3px 5px #3f3f3f;
     background-color: rgba(145, 165, 248, 0.65);
     color: azure;
+}
+button:hover  {
+    color: red;
 }
 #reset11{
     width: 35%;
@@ -133,6 +143,7 @@ select{
     padding: 5px;
     color: #afe2af;
 }
+
 #i1{
     padding: 5px;
     font-size:1.6em;
@@ -248,7 +259,7 @@ select{
 }
 label{
     font-size: 1.0rem;
-    color: #3f3f3f;
+    color: #dde7eb;
     margin-top: 5px;
 }
 #lblB,#lblA,#passengerC{
@@ -256,7 +267,7 @@ label{
     padding: 5px;
 }
 em{
-    color: darkgray;
+    color: #4c33aa;
 }
 #nav2,#nav1{
     margin-top: 2px;
@@ -269,10 +280,11 @@ em{
    text-align: center;
 }
 #nav2{
-    background-color: #eed5b5;
+    background-color: #2c2721;
     border: black 1px solid;
     border-radius:15px;
 }
+
 @media only screen and (max-width: 320px) {
 
     body {
