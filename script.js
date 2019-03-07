@@ -708,9 +708,6 @@ function gateOpen(){
 
 //gg();
 
-
-
-
 function timeAutoCloseDoor() {
     gg =  setInterval(gateOpen,10);
     //checkForDouble1 = true;
@@ -719,7 +716,6 @@ function timeAutoCloseDoor() {
 document.getElementById("gate11").onclick = function(e){
     // alert(e.target.parentNode.id);
 };
-
 
 
 
@@ -1288,7 +1284,7 @@ function goHomeA() {
         }
     }
     if (temptT1A === "b-1R"){
-        goDown1A("Floor 00");positionA("Floor -1",ttA);
+        goDown1A("Floor -1");positionA("Floor -1",ttA);
         if (posA === 1050){
             checkForDoubleA = true;
         }
