@@ -1124,7 +1124,8 @@ function callCarrageToMyFloorA(e) {
     if (checkForDoubleA1 === false){
         return;
     }
-    if (e.target.id === "b10R") {
+    alert(e.target.id);
+    if (e.target.id === "btn10R") {
         // This Carrage can not reach floor 10
         return;
     }
